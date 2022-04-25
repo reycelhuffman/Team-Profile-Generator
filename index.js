@@ -9,6 +9,30 @@ inquirer
         
         {
             type: 'input',
-            name: 'title',
-            message: "Title of your project",
+            name: 'name',
+            message: "Enter name here",
             },
+        {
+            type: 'list'
+            name: "role",
+            message: "What is your role?"
+            choices: [
+                "enginner",
+                "intern",
+                "manager",  
+            ]
+        },
+
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is your id number?'
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email?',
+        },
+        {
+            
+        }
