@@ -3,16 +3,16 @@ class Manager {
 
     constructor(name, id, email, officeNumber) {
 
-        super (name, id, email)
+        super (name, id, email);
         
         this.officeNumber = officeNumber;
     }
     getRole() {
-        return 'Manager'
+        return 'Manager';
     }
 
     getOfficeNumber() {
-        return this.officeNumber
+        return this.officeNumber;
     }
 
 }

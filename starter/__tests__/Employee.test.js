@@ -7,14 +7,14 @@ describe("Employee", () => {
       // Arrange
       let name = "Effie";
       let id = 1;
-      let email = "Effie@gmail.com";
+      let email = "effie@gmail.com";
       //Act
       let employee = new Employee(name, id, email);
 
       //Assert
       expect(employee.name).toEqual("Effie");
       expect(employee.id).toEqual(1);
-      expect(employee.email).toEqual("Effie@gmail.com");
+      expect(employee.email).toEqual("effie@gmail.com");
     });
   });
 
@@ -22,7 +22,7 @@ describe("Employee", () => {
     it("should set values of name when I set ", () => {
       // Arrange
       let id = 1;
-      let email = "Effie@gmail.com";
+      let email = "effie@gmail.com";
       let employee = new Employee(name, id, email);
 
       //Act
@@ -36,7 +36,7 @@ describe("Employee", () => {
     it("should set values of id when I set ", () => {
       // Arrange
       let name = "Effie";
-      let email = "Effie@gmail.com";
+      let email = "effie@gmail.com";
       
       //ACt 
       let getId = employee.getId("1");
@@ -54,7 +54,7 @@ describe("Employee", () => {
       let id = 1;
       let employee = new Employee(name, id, email);
       //Act
-      let getEmail = employee.getEmail("Effie@gmail.com");
+      let getEmail = employee.getEmail("effie@gmail.com");
 
       //Assert
       expect(getEmail).toEqual("Employee");
@@ -66,11 +66,11 @@ describe("Employee", () => {
       // Arrange
       let name = "Effie";
       let id = 1;
-      let email = "Effie@gmail.com";
+      let email = "effie@gmail.com";
       let employee = new Employee(name, id, email);
 
       //Act
-      let getRole = employee.getRole();
+      let getRole = employee.getRole("Employee");
 
       //Assert
       expect(getRole).toEqual("Employee");

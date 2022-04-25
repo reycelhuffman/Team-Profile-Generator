@@ -1,8 +1,6 @@
 class Employee {
 
    constructor(name, id, email) {
-
-      super(name, id, email)
       
       this.name = name;
       this.id = id;
@@ -22,7 +20,7 @@ class Employee {
    }
 
    getRole() {
-      return 'Employee'
+      return 'Employee';
    }
 
 }

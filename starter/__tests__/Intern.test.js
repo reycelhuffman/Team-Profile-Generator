@@ -35,7 +35,7 @@ describe("Intern", () => {
         it("should set values of id when I set ", () => {
             // Arrange
             let name = "Katniss";
-            let email = "Katniss@gmail.com";
+            let email = "katniss@gmail.com";
 
             //ACt 
             let getId = employee.getId("3");
@@ -65,7 +65,7 @@ describe("Intern", () => {
             // Arrange
             let name = "Katniss";
             let id = 3;
-            let email = "Katniss@gmail.com";
+            let email = "katniss@gmail.com";
             let employee = new Employee(name, id, email);
 
             //Act
@@ -81,7 +81,7 @@ describe("Intern", () => {
             // Arrange
             let name = "Katniss";
             let id = 3;
-            let email = "Katniss@gmail.com";
+            let email = "katniss@gmail.com";
             let employee = new Employee(name, id, email);
 
             //Act

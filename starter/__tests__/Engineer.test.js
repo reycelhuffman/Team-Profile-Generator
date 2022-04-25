@@ -13,7 +13,7 @@ describe("Engineer", () => {
             //Assert
             expect(employee.name).toEqual("Plutarch");
             expect(employee.id).toEqual("2");
-            expect(employee.email).toEqual("Plutarch@gmail.com");
+            expect(employee.email).toEqual("plutarch@gmail.com");
         });
     });
 
@@ -21,7 +21,7 @@ describe("Engineer", () => {
         it("should set values of name when I set ", () => {
             // Arrange
             let id = 2;
-            let email = "Plutarch@gmail.com";
+            let email = "plutarch@gmail.com";
             let employee = new Employee(name, id, email);
 
             //Act
@@ -42,7 +42,7 @@ describe("Engineer", () => {
 
             //Assert
             expect(getId).toEqual("Employee");
-
+        
         });
     });
     describe("getEmail", () => {
@@ -50,10 +50,10 @@ describe("Engineer", () => {
 
             //Arrange
             let name = "Plutarch";
-            let id = 1;
+            let id = 2;
             let employee = new Employee(name, id, email);
             //Act
-            let getEmail = employee.getEmail("Plutarch@gmail.com");
+            let getEmail = employee.getEmail("plutarch@gmail.com");
 
             //Assert
             expect(getEmail).toEqual("Employee");
@@ -64,12 +64,12 @@ describe("Engineer", () => {
             //Arrange
             // Arrange
             let name = "Plutarch";
-            let id = 1;
-            let email = "Plutarch@gmail.com";
+            let id = 2;
+            let email = "plutarch@gmail.com";
             let employee = new Employee(name, id, email);
 
             //Act
-            let getRole = employee.getRole();
+            let getRole = employee.getRole("Engineer");
 
             //Assert
             expect(getRole).toEqual("Employee");
@@ -85,7 +85,7 @@ describe("Engineer", () => {
             let employee = new Employee(name, id, email);
 
             //Act
-            let getGitHub = employee.getGitHub();
+            let getGitHub = employee.getGitHub("plutarch@github.com");
 
             //Assert
             expect(getGitHub).toEqual("Employee");

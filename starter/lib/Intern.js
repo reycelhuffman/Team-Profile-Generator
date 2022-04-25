@@ -5,15 +5,15 @@ class Intern {
 
         super(name, id, email)
         
-        this.school = school
+        this.school = school;
     }
 
     getRole() {
-        return 'Intern'
+        return 'Intern';
     }
     
     getSchool() {
-        return this.school
+        return this.school;
     }
 
 }
