@@ -1,0 +1,17 @@
+header {
+    text-align: center;
+    border: solid black
+}
+.flexbox {
+    display: flex;
+    border: solid pink;
+
+}
+
+.topCards {
+    display: flex;
+}
+
+.bottomCards {
+    display: flex;
+}
