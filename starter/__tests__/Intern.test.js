@@ -20,9 +20,7 @@ describe("Intern", () => {
     describe("getName", () => {
         it("should set values of name when I set ", () => {
             // Arrange
-            let id = 3;
-            let email = "katniss@gmail.com";
-            let employee = new Employee(name, id, email);
+            let employee = new Employee(name);
 
             //Act
             let name = employee.getName("Katniss");
@@ -34,8 +32,7 @@ describe("Intern", () => {
     describe("getId", () => {
         it("should set values of id when I set ", () => {
             // Arrange
-            let name = "Katniss";
-            let email = "katniss@gmail.com";
+            let employee = new Employee(id);
 
             //ACt 
             let getId = employee.getId("3");
@@ -49,9 +46,7 @@ describe("Intern", () => {
         it("should return Employee when getEmail is called ", () => {
 
             //Arrange
-            let name = "Katniss";
-            let id = 3;
-            let employee = new Employee(name, id, email);
+            let employee = new Employee(email);
             //Act
             let getEmail = employee.getEmail("katniss@gmail.com");
 
@@ -62,11 +57,7 @@ describe("Intern", () => {
     describe("getRole", () => {
         it("should return Employee when getRole is called ", () => {
             //Arrange
-            // Arrange
-            let name = "Katniss";
-            let id = 3;
-            let email = "katniss@gmail.com";
-            let employee = new Employee(name, id, email);
+            let employee = new Employee(role);
 
             //Act
             let getRole = employee.getRole("Intern");
@@ -78,11 +69,7 @@ describe("Intern", () => {
     describe("getSchool", () => {
         it("should return Employee when getSchool is called ", () => {
             //Arrange
-            // Arrange
-            let name = "Katniss";
-            let id = 3;
-            let email = "katniss@gmail.com";
-            let employee = new Employee(name, id, email);
+            let employee = new Employee(school);
 
             //Act
             let getSchool = employee.getSchool("School");

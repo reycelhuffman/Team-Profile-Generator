@@ -20,9 +20,7 @@ describe("Engineer", () => {
     describe("getName", () => {
         it("should set values of name when I set ", () => {
             // Arrange
-            let id = 2;
-            let email = "plutarch@gmail.com";
-            let employee = new Employee(name, id, email);
+            let employee = new Employee(name);
 
             //Act
             let name = employee.getName("Plutarch");
@@ -34,8 +32,7 @@ describe("Engineer", () => {
     describe("getId", () => {
         it("should set values of id when I set ", () => {
             // Arrange
-            let name = "Plutarch";
-            let email = "plutarch@gmail.com";
+            let employee = new Employee(id);
 
             //ACt 
             let getId = employee.getId("2");
@@ -49,9 +46,7 @@ describe("Engineer", () => {
         it("should return Employee when getEmail is called ", () => {
 
             //Arrange
-            let name = "Plutarch";
-            let id = 2;
-            let employee = new Employee(name, id, email);
+            let employee = new Employee(email);
             //Act
             let getEmail = employee.getEmail("plutarch@gmail.com");
 
@@ -62,11 +57,7 @@ describe("Engineer", () => {
     describe("getRole", () => {
         it("should return Employee when getRole is called ", () => {
             //Arrange
-            // Arrange
-            let name = "Plutarch";
-            let id = 2;
-            let email = "plutarch@gmail.com";
-            let employee = new Employee(name, id, email);
+            let employee = new Employee(role);
 
             //Act
             let getRole = employee.getRole("Engineer");
@@ -78,11 +69,7 @@ describe("Engineer", () => {
     describe("getGitHub", () => {
         it("should return Employee when getGitHub is called ", () => {
             //Arrange
-            // Arrange
-            let name = "Plutarch";
-            let id = 2;
-            let email = "Plutarch@gmail.com";
-            let employee = new Employee(name, id, email);
+            let employee = new Employee(github);
 
             //Act
             let getGitHub = employee.getGitHub("plutarch@github.com");

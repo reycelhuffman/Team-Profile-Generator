@@ -21,9 +21,7 @@ describe("Employee", () => {
   describe("getName", () => {
     it("should set values of name when I set ", () => {
       // Arrange
-      let id = 1;
-      let email = "effie@gmail.com";
-      let employee = new Employee(name, id, email);
+      let employee = new Employee(name);
 
       //Act
       let name = employee.getName("Effie");
@@ -35,8 +33,7 @@ describe("Employee", () => {
   describe("getId", () => {
     it("should set values of id when I set ", () => {
       // Arrange
-      let name = "Effie";
-      let email = "effie@gmail.com";
+      let employee = new Employee(id);
       
       //ACt 
       let getId = employee.getId("1");
@@ -50,9 +47,7 @@ describe("Employee", () => {
     it("should return Employee when getEmail is called ", () => {
 
       //Arrange
-      let name = "Effie";
-      let id = 1;
-      let employee = new Employee(name, id, email);
+      let employee = new Employee(email);
       //Act
       let getEmail = employee.getEmail("effie@gmail.com");
 
@@ -63,11 +58,7 @@ describe("Employee", () => {
   describe("getRole", () => {
     it("should return Employee when getRole is called ", () => {
       //Arrange
-      // Arrange
-      let name = "Effie";
-      let id = 1;
-      let email = "effie@gmail.com";
-      let employee = new Employee(name, id, email);
+      let employee = new Employee(role);
 
       //Act
       let getRole = employee.getRole("Employee");
