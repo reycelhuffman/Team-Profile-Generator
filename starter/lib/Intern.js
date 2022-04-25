@@ -12,7 +12,7 @@ class Intern {
         return 'Intern'
     }
     
-    getRole() {
+    getSchool() {
         return this.school
     }
 
