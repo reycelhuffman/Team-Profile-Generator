@@ -5,7 +5,7 @@ describe("Employee", () => {
   describe("Initialization", () => {
     it("should set the values of name, id and email, when i set them.", () => {
       // Arrange
-      let name = "Reniel";
+      let name = "Katniss";
       let id = 1;
       let email = "Reniel@gmail.com";
       //Act
