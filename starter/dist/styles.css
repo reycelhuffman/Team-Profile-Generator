@@ -2,14 +2,18 @@ header {
     text-align: center;
     border: solid black
 }
-.flexbox {
+.flexboxTop {
     display: flex;
     border: solid pink;
 
 }
-
+.flexboxBottom {
+    padding: 1px;
+    border: solid red;
+}
 .topCards {
-    display: flex;
+    display: flexbox
+    border: solid black
 }
 
 .bottomCards {
