@@ -5,42 +5,75 @@ describe("Employee", () => {
   describe("Initialization", () => {
     it("should set the values of name, id and email, when i set them.", () => {
       // Arrange
-      let name = "Katniss";
+      let name = "Effie";
       let id = 1;
-      let email = "Reniel@gmail.com";
+      let email = "Effie@gmail.com";
       //Act
       let employee = new Employee(name, id, email);
 
       //Assert
-      expect(employee.name).toEqual("Reniel");
+      expect(employee.name).toEqual("Effie");
       expect(employee.id).toEqual(1);
-      expect(employee.email).toEqual("Reniel@gmail.com");
+      expect(employee.email).toEqual("Effie@gmail.com");
     });
   });
 
   describe("getName", () => {
-    it("should ", () => {});
+    it("should set values of name when I set ", () => {
+      // Arrange
+      let id = 1;
+      let email = "Effie@gmail.com";
+      let employee = new Employee(name, id, email);
+
+      //Act
+      let name = employee.getName("Effie");
+
+      //Assert
+      expect(getName).toEqual("Employee");
+    });
   });
   describe("getId", () => {
-    it("should ", () => {});
+    it("should set values of id when I set ", () => {
+      // Arrange
+      let name = "Effie";
+      let email = "Effie@gmail.com";
+      
+      //ACt 
+      let getId = employee.getId("1");
+
+      //Assert
+      expect(getId).toEqual("Employee");
+
+    });
   });
   describe("getEmail", () => {
-    it("should ", () => {});
+    it("should return Employee when getEmail is called ", () => {
+
+      //Arrange
+      let name = "Effie";
+      let id = 1;
+      let employee = new Employee(name, id, email);
+      //Act
+      let getEmail = employee.getEmail("Effie@gmail.com");
+
+      //Assert
+      expect(getEmail).toEqual("Employee");
+    });
   });
   describe("getRole", () => {
     it("should return Employee when getRole is called ", () => {
       //Arrange
       // Arrange
-      let name = "Reniel";
+      let name = "Effie";
       let id = 1;
-      let email = "Reniel@gmail.com";
+      let email = "Effie@gmail.com";
       let employee = new Employee(name, id, email);
 
       //Act
-      let role = employee.getRole();
+      let getRole = employee.getRole();
 
       //Assert
-      expect(role).toEqual("Employee");
+      expect(getRole).toEqual("Employee");
     });
   });
 });
