@@ -1,21 +1,38 @@
-header {
+.headerTitle {
     text-align: center;
-    border: solid black
+    border: solid black;
+    font-size: 20pt;
 }
 .flexboxTop {
     display: flex;
-    border: solid pink;
+    border: solid red;
+    justify-content: center;
+    flex-wrap: wrap;
+
 
 }
 .flexboxBottom {
-    padding: 1px;
+    display: flex;
+    /* padding: 1px; */
+    justify-content: center;
     border: solid red;
+    flex-wrap: wrap;
 }
-.topCards {
-    display: flexbox
-    border: solid black
+/* .topCards {
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+
 }
 
 .bottomCards {
     display: flex;
+    margin: 20px;
+} */
+
+.card-body {
+    margin: 20px 20px 20px 20px;
+    border: solid blue;
+    
+
 }

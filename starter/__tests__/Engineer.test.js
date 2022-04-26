@@ -49,7 +49,7 @@ describe("Engineer", () => {
             // let getEmail = employee.getEmail();
 
             //Assert
-            expect(employee.email).toEqual("plutarch@gmail.com");
+            expect(employee.email).toEqual("email");
         });
     });
     describe("getRole", () => {
@@ -65,16 +65,16 @@ describe("Engineer", () => {
         });
     });
     describe("getGitHub", () => {
-        it("should return GitHub when getGitHub is called ", () => {
+        it("should return gitHub when getGitHub is called ", () => {
             //Arrange
-            let employee = new Engineer();
+            let employee = new Engineer("gitHub");
 
 
             //Act
             let getGitHub = employee.getGitHub();
 
             //Assert
-            expect(employee.GitHub).toEqual("GitHub");
+            expect(employee.gitHub).toEqual("gitHub");
         });
     });
 });

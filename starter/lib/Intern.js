@@ -3,7 +3,7 @@ class Intern {
 
     constructor(name, id, email, school) {
 
-        super(name, id, email)
+        super (name, id, email)
         
         this.school = school;
     }

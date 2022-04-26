@@ -46,12 +46,13 @@ describe("Employee", () => {
     it("should return email when getEmail is called ", () => {
 
       //Arrange
-      let employee = new Employee("Effie", 1);
+      let employee = new Employee("Effie", 1, "email");
       //Act
-      // let getEmail = employee.getEmail();
+      let getEmail = employee.getEmail();
 
       //Assert
       expect(employee.email).toEqual("email");
+      
     });
   });
   describe("getRole", () => {
