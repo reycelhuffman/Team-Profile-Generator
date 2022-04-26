@@ -35,7 +35,7 @@ describe("Employee", () => {
       let employee = new Employee("Effie", 1);
       
       //ACt 
-      let getId = employee.getId();
+      // let getId = employee.getId();
 
       //Assert
       expect(employee.id).toEqual(1);
@@ -48,7 +48,7 @@ describe("Employee", () => {
       //Arrange
       let employee = new Employee("Effie", 1);
       //Act
-      let getEmail = employee.getEmail();
+      // let getEmail = employee.getEmail();
 
       //Assert
       expect(employee.email).toEqual("effie@gmail.com");

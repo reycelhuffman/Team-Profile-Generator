@@ -1,4 +1,5 @@
 const Employee = require("../lib/Employee");
+const Engineer = require("../lib/Engineer");
 
 describe("Engineer", () => {
     describe("Initialization", () => {
@@ -8,7 +9,7 @@ describe("Engineer", () => {
             let id = 2;
             let email = "plutarch@gmail.com";
             //Act
-            let employee = new Employee(name, id, email);
+            let employee = new Engineer(name, id, email);
 
             //Assert
             expect(employee.name).toEqual("Plutarch");
@@ -20,7 +21,7 @@ describe("Engineer", () => {
     describe("getName", () => {
         it("should set values of name when I set ", () => {
             // Arrange
-            let employee = new Employee("Plutarch");
+            let employee = new Engineer("Plutarch");
 
             //Assert
             expect(employee.name).toEqual("Plutarch");
@@ -29,10 +30,10 @@ describe("Engineer", () => {
     describe("getId", () => {
         it("should set values of id when I set ", () => {
             // Arrange
-            let employee = new Employee("Plutarch", 2);
+            let employee = new Engineer("Plutarch", 2);
 
             //ACt 
-            let getId = employee.getId();
+            // let getId = employee.getId();
 
             //Assert
             expect(employee.id).toEqual(2);
@@ -43,18 +44,18 @@ describe("Engineer", () => {
         it("should return email when getEmail is called ", () => {
 
             //Arrange
-            let employee = new Employee("Plutarch", 2);
+            let employee = new Engineer("Plutarch", 2, "email");
             //Act
-            let getEmail = employee.getEmail();
+            // let getEmail = employee.getEmail();
 
             //Assert
-            expect(getEmail).toEqual("plutarch@gmail.com");
+            expect(employee.email).toEqual("plutarch@gmail.com");
         });
     });
     describe("getRole", () => {
         it("should return Engineer when getRole is called ", () => {
             //Arrange
-            let employee = new Employee();
+            let employee = new Engineer();
 
             //Act
             let getRole = employee.getRole();
@@ -66,13 +67,14 @@ describe("Engineer", () => {
     describe("getGitHub", () => {
         it("should return GitHub when getGitHub is called ", () => {
             //Arrange
-            let employee = new Employee();
+            let employee = new Engineer();
+
 
             //Act
             let getGitHub = employee.getGitHub();
 
             //Assert
-            expect(getGitHub).toEqual("GitHub");
+            expect(employee.GitHub).toEqual("GitHub");
         });
     });
 });

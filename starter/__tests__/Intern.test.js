@@ -12,7 +12,7 @@ describe("Intern", () => {
 
             //Assert
             expect(employee.name).toEqual("Katniss");
-            expect(employee.id).toEqual("3");
+            expect(employee.id).toEqual(3);
             expect(employee.email).toEqual("katniss@gmail.com");
         });
     });
@@ -20,62 +20,62 @@ describe("Intern", () => {
     describe("getName", () => {
         it("should set values of name when I set ", () => {
             // Arrange
-            let employee = new Employee(name);
+            let employee = new Employee("Katniss");
 
             //Act
-            let name = employee.getName("Katniss");
+            let name = employee.getName();
 
             //Assert
-            expect(getName).toEqual("Employee");
+            expect(employee.name).toEqual("Katniss");
         });
     });
     describe("getId", () => {
         it("should set values of id when I set ", () => {
             // Arrange
-            let employee = new Employee(id);
+            let employee = new Employee("Katniss", 3);
 
             //ACt 
-            let getId = employee.getId("3");
+            // let getId = employee.getId("3");
 
             //Assert
-            expect(getId).toEqual("Employee");
+            expect(employee.id).toEqual(3);
 
         });
     });
     describe("getEmail", () => {
-        it("should return Employee when getEmail is called ", () => {
+        it("should return mail when getEmail is called ", () => {
 
             //Arrange
-            let employee = new Employee(email);
+            let employee = new Employee("Katniss", 3);
             //Act
-            let getEmail = employee.getEmail("katniss@gmail.com");
+            // let getEmail = employee.getEmail("katniss@gmail.com");
 
             //Assert
-            expect(getEmail).toEqual("Employee");
+            expect(employee.email).toEqual("katniss@gmail.com");
         });
     });
     describe("getRole", () => {
-        it("should return Employee when getRole is called ", () => {
+        it("should return Intern when getRole is called ", () => {
             //Arrange
-            let employee = new Employee(role);
+            let employee = new Employee();
 
             //Act
-            let getRole = employee.getRole("Intern");
+            let getRole = employee.getRole();
 
             //Assert
-            expect(getRole).toEqual("Employee");
+            expect(getRole).toEqual("Intern");
         });
     });
     describe("getSchool", () => {
-        it("should return Employee when getSchool is called ", () => {
+        it("should return Northwestern when getSchool is called ", () => {
             //Arrange
-            let employee = new Employee(school);
+            let employee = new Employee();
 
             //Act
-            let getSchool = employee.getSchool("School");
+            let getSchool = employee.getSchool();
 
             //Assert
-            expect(getSchool).toEqual("Employee");
+            expect(getSchool).toEqual("Northwestern");
         });
     });
 });
