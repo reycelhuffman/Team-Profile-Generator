@@ -21,25 +21,22 @@ describe("Employee", () => {
   describe("getName", () => {
     it("should set values of name when I set ", () => {
       // Arrange
-      let employee = new Employee(name);
+      let employee = new Employee("Effie");
 
-      //Act
-      let name = employee.getName("Effie");
 
-      //Assert
-      expect(getName).toEqual("Employee");
+      expect(employee.name).toEqual("Effie");
     });
   });
   describe("getId", () => {
     it("should set values of id when I set ", () => {
       // Arrange
-      let employee = new Employee(id);
+      let employee = new Employee("Effie", "1");
       
       //ACt 
-      let getId = employee.getId("1");
+      let getId = employee.getId();
 
       //Assert
-      expect(getId).toEqual("Employee");
+      expect(getId).toEqual("1");
 
     });
   });
@@ -47,21 +44,21 @@ describe("Employee", () => {
     it("should return Employee when getEmail is called ", () => {
 
       //Arrange
-      let employee = new Employee(email);
+      let employee = new Employee("Effie", "1" "effie@gmail.com");
       //Act
-      let getEmail = employee.getEmail("effie@gmail.com");
+      let getEmail = employee.getEmail();
 
       //Assert
-      expect(getEmail).toEqual("Employee");
+      expect(getEmail).toEqual("effie@gmail.com");
     });
   });
   describe("getRole", () => {
     it("should return Employee when getRole is called ", () => {
       //Arrange
-      let employee = new Employee(role);
+      let employee = new Employee();
 
       //Act
-      let getRole = employee.getRole("Employee");
+      let getRole = employee.getRole();
 
       //Assert
       expect(getRole).toEqual("Employee");

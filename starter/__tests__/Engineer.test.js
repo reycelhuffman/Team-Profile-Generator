@@ -20,25 +20,22 @@ describe("Engineer", () => {
     describe("getName", () => {
         it("should set values of name when I set ", () => {
             // Arrange
-            let employee = new Employee(name);
-
-            //Act
-            let name = employee.getName("Plutarch");
+            let employee = new Employee("Plutarch");
 
             //Assert
-            expect(getName).toEqual("Employee");
+            expect(getName).toEqual("Plutarch");
         });
     });
     describe("getId", () => {
         it("should set values of id when I set ", () => {
             // Arrange
-            let employee = new Employee(id);
+            let employee = new Employee("Plutarch", "2", "plutarch@gmail.com");
 
             //ACt 
-            let getId = employee.getId("2");
+            let getId = employee.getId();
 
             //Assert
-            expect(getId).toEqual("Employee");
+            expect(getId).toEqual("2");
         
         });
     });
@@ -46,36 +43,36 @@ describe("Engineer", () => {
         it("should return Employee when getEmail is called ", () => {
 
             //Arrange
-            let employee = new Employee(email);
+            let employee = new Employee("Plutarch", "2","plutarch@gmail");
             //Act
-            let getEmail = employee.getEmail("plutarch@gmail.com");
+            let getEmail = employee.getEmail();
 
             //Assert
-            expect(getEmail).toEqual("Employee");
+            expect(getEmail).toEqual("plutarch@gmail.com");
         });
     });
     describe("getRole", () => {
         it("should return Employee when getRole is called ", () => {
             //Arrange
-            let employee = new Employee(role);
+            let employee = new Employee();
 
             //Act
-            let getRole = employee.getRole("Engineer");
+            let getRole = employee.getRole();
 
             //Assert
-            expect(getRole).toEqual("Employee");
+            expect(getRole).toEqual("Engineer");
         });
     });
     describe("getGitHub", () => {
         it("should return Employee when getGitHub is called ", () => {
             //Arrange
-            let employee = new Employee(github);
+            let employee = new Employee();
 
             //Act
-            let getGitHub = employee.getGitHub("plutarch@github.com");
+            let getGitHub = employee.getGitHub();
 
             //Assert
-            expect(getGitHub).toEqual("Employee");
+            expect(getGitHub).toEqual("plutarch@github.com");
         });
     });
 });
