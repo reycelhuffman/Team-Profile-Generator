@@ -6,8 +6,8 @@ const Manager = require('./lib/Manager');
 
 
 
-    //Manager function
-    const promptCreateManager = () => {
+    //Engineer function
+const promptCreateEngineer = () => {
         return inquirer.prompt([
             {
                 type: 'input',
@@ -25,6 +25,11 @@ const Manager = require('./lib/Manager');
                 message: 'What is your email?',
             },
             {
+                type: 'input',
+                name: 'gitHub',
+                message: 'What is your gitHub?',
+            },
+            {
                 type: 'checkbox',
             name: "role",
             message: "What is your role?",
@@ -35,13 +40,89 @@ const Manager = require('./lib/Manager');
             ] 
             }
         ])
-
         .then((response) => {
             console.log (response); 
-            let manager = new Manager(response.name)
+            let manager = new Engineer(response.name)
         })
     }
-    /
+
+const promptCreateIntern = () => {
+        return inquirer.prompt([
+            {
+                type: 'input',
+                name: 'name',
+                message: "Enter name here",
+            },
+            {
+                type: 'input',
+                name: 'id',
+                message: 'What is your id number?'
+            },
+            {
+                type: 'input',
+                name: 'email',
+                message: 'What is your email?',
+            },
+            {
+                type: 'input',
+                name: 'school',
+                message: 'Where do you go to school?',
+            },
+            {
+                type: 'checkbox',
+            name: "role",
+            message: "What is your role?",
+            choices: [
+                "engineer",
+                "intern",
+                "manager",  
+            ] 
+            }
+        ])
+        .then((response) => {
+            console.log (response); 
+            let manager = new Intern(response.name)
+        })
+    }
+
+const promptCreateManager = () => {
+        return inquirer.prompt([
+                {
+                    type: 'input',
+                    name: 'name',
+                    message: "Enter name here",
+                },
+                {
+                    type: 'input',
+                    name: 'id',
+                    message: 'What is your id number?'
+                },
+                {
+                    type: 'input',
+                    name: 'email',
+                    message: 'What is your email?',
+                },
+                {
+                    type: 'input',
+                    name: 'officeNumber',
+                    message: 'What is your officeNumber?',
+                },
+                {
+                    type: 'checkbox',
+                name: "role",
+                message: "What is your role?",
+                choices: [
+                    "engineer",
+                    "intern",
+                    "manager",  
+                ] 
+                }
+            ])
+            .then((response) => {
+                console.log (response); 
+                let manager = new Manager(response.name)
+            })
+        }
 
     const generateHTML = ({ name, id, email, gitHub, officeNumber, school, role }) =>
     `<!DOCTYPE html>
