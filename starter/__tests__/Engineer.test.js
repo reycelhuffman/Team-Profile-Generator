@@ -12,7 +12,7 @@ describe("Engineer", () => {
 
             //Assert
             expect(employee.name).toEqual("Plutarch");
-            expect(employee.id).toEqual("2");
+            expect(employee.id).toEqual(2);
             expect(employee.email).toEqual("plutarch@gmail.com");
         });
     });
@@ -23,27 +23,27 @@ describe("Engineer", () => {
             let employee = new Employee("Plutarch");
 
             //Assert
-            expect(getName).toEqual("Plutarch");
+            expect(employee.name).toEqual("Plutarch");
         });
     });
     describe("getId", () => {
         it("should set values of id when I set ", () => {
             // Arrange
-            let employee = new Employee("Plutarch", "2", "plutarch@gmail.com");
+            let employee = new Employee("Plutarch", 2);
 
             //ACt 
             let getId = employee.getId();
 
             //Assert
-            expect(getId).toEqual("2");
+            expect(employee.id).toEqual(2);
         
         });
     });
     describe("getEmail", () => {
-        it("should return Employee when getEmail is called ", () => {
+        it("should return email when getEmail is called ", () => {
 
             //Arrange
-            let employee = new Employee("Plutarch", "2","plutarch@gmail");
+            let employee = new Employee("Plutarch", 2);
             //Act
             let getEmail = employee.getEmail();
 
@@ -52,7 +52,7 @@ describe("Engineer", () => {
         });
     });
     describe("getRole", () => {
-        it("should return Employee when getRole is called ", () => {
+        it("should return Engineer when getRole is called ", () => {
             //Arrange
             let employee = new Employee();
 
@@ -64,7 +64,7 @@ describe("Engineer", () => {
         });
     });
     describe("getGitHub", () => {
-        it("should return Employee when getGitHub is called ", () => {
+        it("should return GitHub when getGitHub is called ", () => {
             //Arrange
             let employee = new Employee();
 
@@ -72,7 +72,7 @@ describe("Engineer", () => {
             let getGitHub = employee.getGitHub();
 
             //Assert
-            expect(getGitHub).toEqual("plutarch@github.com");
+            expect(getGitHub).toEqual("GitHub");
         });
     });
 });
