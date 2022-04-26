@@ -3,7 +3,7 @@
     border: solid black;
     font-size: 20pt;
 }
-.flexboxTop {
+.flexBoxTop {
     display: flex;
     border: solid red;
     justify-content: center;
@@ -11,7 +11,7 @@
 
 
 }
-.flexboxBottom {
+.flexBoxBottom {
     display: flex;
     /* padding: 1px; */
     justify-content: center;
