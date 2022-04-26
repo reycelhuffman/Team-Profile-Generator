@@ -33,7 +33,7 @@ describe("Intern", () => {
     describe("getId", () => {
         it("should set values of id when I set ", () => {
             // Arrange
-            let employee = new Intern("Katniss", 3);
+            let employee = new Intern("Katniss", 3, "email");
 
             //ACt 
             // let getId = employee.getId("3");
@@ -47,7 +47,7 @@ describe("Intern", () => {
         it("should return email when getEmail is called ", () => {
 
             //Arrange
-            let employee = new Intern("Katniss", 3);
+            let employee = new Intern("Katniss", 3, "email");
             //Act
             // let getEmail = employee.getEmail("katniss@gmail.com");
 
@@ -70,7 +70,7 @@ describe("Intern", () => {
     describe("getSchool", () => {
         it("should return Northwestern when getSchool is called ", () => {
             //Arrange
-            let employee = new Intern();
+            let employee = new Intern("Katniss", 3, "email", "Northwestern");
 
             //Act
             let getSchool = employee.getSchool();

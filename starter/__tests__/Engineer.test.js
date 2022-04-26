@@ -67,7 +67,7 @@ describe("Engineer", () => {
     describe("getGitHub", () => {
         it("should return gitHub when getGitHub is called ", () => {
             //Arrange
-            let employee = new Engineer("gitHub");
+            let employee = new Engineer("Plutarch", 2, "plutarch@gmail.com", "plutarch@gitHub");
 
 
             //Act

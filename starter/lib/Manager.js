@@ -1,5 +1,5 @@
 const Employee = require("./Employee");
-class Manager {
+class Manager extends Employee {
 
     constructor(name, id, email, officeNumber) {
 

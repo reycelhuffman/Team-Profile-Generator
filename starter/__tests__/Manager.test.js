@@ -44,7 +44,7 @@ describe("Manager", () => {
         it("should return email when getEmail is called ", () => {
 
             //Arrange
-            let employee = new Manager("President Snow", 4);
+            let employee = new Manager("President Snow", 4, "email");
             
             //Act
             // let getEmail = employee.getEmail("presidentsnow@gmail.com");
@@ -68,7 +68,7 @@ describe("Manager", () => {
     describe("getOfficeNumber", () => {
         it("should return officeNumbers when getOfficeNumber is called ", () => {
             //Arrange
-            let employee = new Manager();
+            let employee = new Manager("President Snow", 4, "email", "officeNumbers");
 
             //Act
             let getOfficeNumber = employee.getOfficeNumber();
