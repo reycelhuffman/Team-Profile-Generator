@@ -7,9 +7,8 @@ const Manager = require('./lib/Manager');
 
 
     //Manager function
-    function createManager() {
-        inquirer
-        .prompt([
+    const promptCreateManager = () => {
+        return inquirer.prompt([
             {
                 type: 'input',
                 name: 'name',
@@ -42,89 +41,7 @@ const Manager = require('./lib/Manager');
             let manager = new Manager(response.name)
         })
     }
-        // Intern function 
-        function createIntern() {
-        inquirer
-        .prompt([
-
-            {
-                type: 'input',
-                name: 'name',
-                message: "Enter name here",
-            },
-            {
-                type: 'input',
-                name: 'id',
-                message: 'What is your id number?'
-            },
-            {
-                type: 'input',
-                name: 'email',
-                message: 'What is your email?', 
-            },
-            {
-                type: 'input',
-                name: 'email',
-                message: 'What is your gitHub?',
-            },
-            {
-                type: 'checkbox',
-            name: "role",
-            message: "What is your role?",
-            choices: [
-                "engineer",
-                "intern",
-                "manager",  
-            ] 
-            }
-        ])
-        .then((response) => {
-            console.log (response); 
-            let manager = new Intern(response.name)
-        })
-    }
-
-    //engineer function
-    function createEngineer() {
-        inquirer
-        .prompt([
-            {
-                type: 'input',
-                name: 'name',
-                message: "Enter name here",
-            },
-            {
-                type: 'input',
-                name: 'id',
-                message: 'What is your id number?'
-            },
-            {
-                type: 'input',
-                name: 'email',
-                message: 'What is your email?',
-            },
-            {
-                type: 'input',
-                name: 'school',
-                message: 'Where do you go to school?',
-            },
-            {
-                type: 'checkbox',
-            name: "role",
-            message: "What is your role?",
-            choices: [
-                "engineer",
-                "intern",
-                "manager",  
-            ] 
-            }
-        ])
-
-        .then((response) => {
-            console.log (response); 
-            let manager = new Engineer(response.name)
-        })
-    }
+    /
 
     const generateHTML = ({ name, id, email, gitHub, officeNumber, school, role }) =>
     `<!DOCTYPE html>
@@ -146,73 +63,25 @@ const Manager = require('./lib/Manager');
                 <div class="card-group">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Name</h4>
-                            <h5 class="card-title">Role</h5>
+                            <h4 class="card-title">Name ${name}</h4>
+                            <h5 class="card-title">Role ${role}</h5>
                             <ul class="list">
-                                <li class="listItems">ID</li>
-                                <li class="listItems">Email</li>
-                                <li class="listItems">Office Number</li>
+                                <li class="listItems">ID ${id}</li>
+                                <li class="listItems">Email${email}</li>
+                                <li class="listItems">Office Number${officeNumber}</li>
+                                <li class="listItems">School${school}</li>
+                                <li class="listItems">gitHub${gitHub}</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Name</h4>
-                            <h5 class="card-title">Role</h5>
-                            <ul class="list">
-                                <li class="listItems">ID</li>
-                                <li class="listItems">Email</li>
-                                <li class="listItems">GitHub</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Name</h4>
-                            <h5 class="card-title">Role</h5>
-                            <ul class="list">
-                                <li class="listItems">ID</li>
-                                <li class="listItems">Email</li>
-                                <li class="listItems">GitHub</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                </div>    
             </section>
         </section>
-        <section class="flexBoxBottom">
-            <section class="bottomCards">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Name</h4>
-                        <h5 class="card-title">Role</h5>
-                        <ul class="list">
-                            <li class="listItems">ID</li>
-                            <li class="listItems">Email</li>
-                            <li class="listItems">GitHub</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Name</h4>
-                        <h5 class="card-title">Role</h5>
-                        <ul class="list">
-                            <li class="listItems">ID</li>
-                            <li class="listItems">Email</li>
-                            <li class="listItems">GitHub</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-        </section>
-        <script src="./starter/__tests__/Employee.test.js"></script>
     </body>
-    
     </html>`;
 
     const init = () => {
-        promptUser()
+        promptCreateManager()
           // Use writeFileSync method to use promises instead of a callback function
         .then((answers) => fs.writeFileSync('index.html', generateHTML(answers)))
         .then(() => console.log('Successfully wrote to index.html'))
@@ -220,6 +89,9 @@ const Manager = require('./lib/Manager');
     };
     
     init();
+
+    
+
 
 
 

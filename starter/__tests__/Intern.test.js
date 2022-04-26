@@ -49,7 +49,7 @@ describe("Intern", () => {
             //Arrange
             let employee = new Intern("Katniss", 3, "email");
             //Act
-            // let getEmail = employee.getEmail("katniss@gmail.com");
+            let getEmail = employee.getEmail("email");
 
             //Assert
             expect(employee.email).toEqual("email");

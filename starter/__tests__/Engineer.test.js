@@ -74,7 +74,7 @@ describe("Engineer", () => {
             let getGitHub = employee.getGitHub();
 
             //Assert
-            expect(employee.gitHub).toEqual("gitHub");
+            expect(getGitHub).toEqual("plutarch@gitHub");
         });
     });
 });
