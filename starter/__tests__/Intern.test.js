@@ -1,4 +1,5 @@
 const Employee = require("../lib/Employee");
+const Intern = require("../lib/Intern");
 
 describe("Intern", () => {
     describe("Initialization", () => {
@@ -8,7 +9,7 @@ describe("Intern", () => {
             let id = 3;
             let email = "katniss@gmail.com";
             //Act
-            let employee = new Employee(name, id, email);
+            let employee = new Intern(name, id, email);
 
             //Assert
             expect(employee.name).toEqual("Katniss");
@@ -20,7 +21,7 @@ describe("Intern", () => {
     describe("getName", () => {
         it("should set values of name when I set ", () => {
             // Arrange
-            let employee = new Employee("Katniss");
+            let employee = new Intern("Katniss");
 
             //Act
             let name = employee.getName();
@@ -32,7 +33,7 @@ describe("Intern", () => {
     describe("getId", () => {
         it("should set values of id when I set ", () => {
             // Arrange
-            let employee = new Employee("Katniss", 3);
+            let employee = new Intern("Katniss", 3);
 
             //ACt 
             // let getId = employee.getId("3");
@@ -43,21 +44,21 @@ describe("Intern", () => {
         });
     });
     describe("getEmail", () => {
-        it("should return mail when getEmail is called ", () => {
+        it("should return email when getEmail is called ", () => {
 
             //Arrange
-            let employee = new Employee("Katniss", 3);
+            let employee = new Intern("Katniss", 3);
             //Act
             // let getEmail = employee.getEmail("katniss@gmail.com");
 
             //Assert
-            expect(employee.email).toEqual("katniss@gmail.com");
+            expect(employee.email).toEqual("email");
         });
     });
     describe("getRole", () => {
         it("should return Intern when getRole is called ", () => {
             //Arrange
-            let employee = new Employee();
+            let employee = new Intern();
 
             //Act
             let getRole = employee.getRole();
@@ -69,7 +70,7 @@ describe("Intern", () => {
     describe("getSchool", () => {
         it("should return Northwestern when getSchool is called ", () => {
             //Arrange
-            let employee = new Employee();
+            let employee = new Intern();
 
             //Act
             let getSchool = employee.getSchool();

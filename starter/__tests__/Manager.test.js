@@ -1,4 +1,5 @@
 const Employee = require("../lib/Employee");
+const Manager = require("../lib/Manager");
 
 describe("Manager", () => {
     describe("Initialization", () => {
@@ -8,7 +9,7 @@ describe("Manager", () => {
             let id = 4;
             let email = "presidentsnow@gmail.com";
             //Act
-            let employee = new Employee(name, id, email);
+            let employee = new Manager(name, id, email);
 
             //Assert
             expect(employee.name).toEqual("President Snow");
@@ -20,7 +21,7 @@ describe("Manager", () => {
     describe("getName", () => {
         it("should set values of name when I set ", () => {
             // Arrange
-            let employee = new Employee("President Snow");
+            let employee = new Manager("President Snow");
 
             //Assert
             expect(employee.name).toEqual("President Snow");
@@ -29,7 +30,7 @@ describe("Manager", () => {
     describe("getId", () => {
         it("should set values of id when I set ", () => {
             // Arrange
-            let employee = new Employee("President Snow", 4);
+            let employee = new Manager("President Snow", 4);
 
             //ACt 
             // let getId = employee.getId();
@@ -43,19 +44,19 @@ describe("Manager", () => {
         it("should return email when getEmail is called ", () => {
 
             //Arrange
-            let employee = new Employee("President Snow", 4);
+            let employee = new Manager("President Snow", 4);
             
             //Act
             // let getEmail = employee.getEmail("presidentsnow@gmail.com");
 
             //Assert
-            expect(employee.email).toEqual("presidentsnow@gmail.com");
+            expect(employee.email).toEqual("email");
         });
     });
     describe("getRole", () => {
         it("should return Manager when getRole is called ", () => {
             //Arrange
-            let employee = new Employee();
+            let employee = new Manager();
 
             //Act
             let getRole = employee.getRole();
@@ -67,7 +68,7 @@ describe("Manager", () => {
     describe("getOfficeNumber", () => {
         it("should return officeNumbers when getOfficeNumber is called ", () => {
             //Arrange
-            let employee = new Employee();
+            let employee = new Manager();
 
             //Act
             let getOfficeNumber = employee.getOfficeNumber();

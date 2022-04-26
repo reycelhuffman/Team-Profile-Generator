@@ -51,7 +51,7 @@ describe("Employee", () => {
       // let getEmail = employee.getEmail();
 
       //Assert
-      expect(employee.email).toEqual("effie@gmail.com");
+      expect(employee.email).toEqual("email");
     });
   });
   describe("getRole", () => {
