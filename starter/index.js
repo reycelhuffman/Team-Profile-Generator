@@ -6,126 +6,60 @@ const Manager = require('./lib/Manager');
 
 
 
-    //Engineer function
-const promptCreateEngineer = () => {
-        return inquirer.prompt([
-            {
-                type: 'input',
-                name: 'name',
-                message: "Enter name here",
-            },
-            {
-                type: 'input',
-                name: 'id',
-                message: 'What is your id number?'
-            },
-            {
-                type: 'input',
-                name: 'email',
-                message: 'What is your email?',
-            },
-            {
-                type: 'input',
-                name: 'gitHub',
-                message: 'What is your gitHub?',
-            },
-            {
-                type: 'checkbox',
+//Engineer function
+const Employees = [];
+function addMembers() {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: "Enter name here",
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is your id number?'
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email?',
+        },
+        {
+            type: 'input',
+            name: 'gitHub',
+            message: 'What is your gitHub?',
+        },
+        {
+            type: 'checkbox',
             name: "role",
             message: "What is your role?",
             choices: [
                 "engineer",
                 "intern",
-                "manager",  
-            ] 
-            }
-        ])
-        .then((response) => {
-            console.log (response); 
-            let manager = new Engineer(response.name)
-        })
-    }
-
-const promptCreateIntern = () => {
-        return inquirer.prompt([
-            {
-                type: 'input',
-                name: 'name',
-                message: "Enter name here",
-            },
-            {
-                type: 'input',
-                name: 'id',
-                message: 'What is your id number?'
-            },
-            {
-                type: 'input',
-                name: 'email',
-                message: 'What is your email?',
-            },
-            {
-                type: 'input',
-                name: 'school',
-                message: 'Where do you go to school?',
-            },
-            {
-                type: 'checkbox',
-            name: "role",
-            message: "What is your role?",
+                "manager",
+            ]
+        },
+        {
+            type: 'input',
+            name: 'addMembers',
+            message: 'Do you wanna add more members?',
             choices: [
-                "engineer",
-                "intern",
-                "manager",  
-            ] 
-            }
-        ])
-        .then((response) => {
-            console.log (response); 
-            let manager = new Intern(response.name)
-        })
-    }
-
-const promptCreateManager = () => {
-        return inquirer.prompt([
-                {
-                    type: 'input',
-                    name: 'name',
-                    message: "Enter name here",
-                },
-                {
-                    type: 'input',
-                    name: 'id',
-                    message: 'What is your id number?'
-                },
-                {
-                    type: 'input',
-                    name: 'email',
-                    message: 'What is your email?',
-                },
-                {
-                    type: 'input',
-                    name: 'officeNumber',
-                    message: 'What is your officeNumber?',
-                },
-                {
-                    type: 'checkbox',
-                name: "role",
-                message: "What is your role?",
-                choices: [
-                    "engineer",
-                    "intern",
-                    "manager",  
-                ] 
-                }
-            ])
-            .then((response) => {
-                console.log (response); 
-                let manager = new Manager(response.name)
-            })
+                "yes",
+                "no"
+            ],
         }
+    ])
+    function ask() {
+        inquirer.prompt(question).then((answers) => {
+            output.push(answers.name);
+        }
+        )
+    }
+
 
     const generateHTML = ({ name, id, email, gitHub, officeNumber, school, role }) =>
-    `<!DOCTYPE html>
+        `<!DOCTYPE html>
     <html lang="en">
     
     <head>
@@ -162,27 +96,10 @@ const promptCreateManager = () => {
     </html>`;
 
     const init = () => {
-        promptCreateManager()
-          // Use writeFileSync method to use promises instead of a callback function
-        .then((answers) => fs.writeFileSync('index.html', generateHTML(answers)))
-        .then(() => console.log('Successfully wrote to index.html'))
-        .catch((err) => console.error(err));
+        promptAddMembers()
+            // Use writeFileSync method to use promises instead of a callback function
+            .then((answers) => fs.writeFileSync('index.html', generateHTML(answers)))
+            .then(() => console.log('Successfully wrote to index.html'))
+            .catch((err) => console.error(err));
     };
-    
-    init();
-
-    
-
-
-
-
-    //choice function to pick what type of role
-    
-    //intern function
-
-    //engineer function
-
-    //generate html
-
-//     <p>Email:<a href="mailto:${response.Email}">${response.Email}</a></p>
-// <p>GitHub:<a href="https://github.com/${response.EngineerGithub}">${response.EngineerGithub}</a></p>
+    init(); 
