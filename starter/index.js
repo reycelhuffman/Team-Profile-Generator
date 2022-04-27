@@ -102,4 +102,5 @@ function addMembers() {
             .then(() => console.log('Successfully wrote to index.html'))
             .catch((err) => console.error(err));
     };
+
     init(); 
