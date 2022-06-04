@@ -6,24 +6,22 @@ const Manager = require('./lib/Manager');
 const Employee = require("./lib/Employee");
 
 
-
-    //Manager function
-    const promptUser= () => {
-        return inquirer.prompt([
+inquirer
+    promptUser([
                 {
                     type: 'input',
-                    name: 'name',
-                    message: "Enter name here",
+                    name: 'managerName',
+                    message: "Enter manager name here",
                 },
                 {
                     type: 'input',
-                    name: 'id',
-                    message: 'What is your id number?'
+                    name: 'managerId',
+                    message: 'What is the managers id number?'
                 },
                 {
                     type: 'input',
-                    name: 'email',
-                    message: 'What is your email?',
+                    name: 'managerEmail',
+                    message: 'What is the managers email?',
                 },
                 {
                     type: 'input',
@@ -31,28 +29,87 @@ const Employee = require("./lib/Employee");
                     message: 'What is your officeNumber?',
                 },
                 {
-                    type: 'list',
-                    name: "role",
-                    message: "What is your role?",
-                    choices: [
-                    "engineer",
-                    "intern",
-                    "manager",  
-                ] 
-                }, 
-                {
                     type: 'input',
-                    name: 'school',
-                    message: 'Where do you go to school?',
+                    name: 'firstEngineerName',
+                    message: 'What is the first engineers name?',
                 },
                 {
                     type: 'input',
-                    name: 'gitHub',
-                    message: 'What is your gitHub email?',
-                }
+                    name: 'firstEngineerId',
+                    message: 'What is the first engineers id?',
+                },
+                {
+                    type: 'input',
+                    name: 'firstEngineerEmail',
+                    message: 'What is the first engineers email?',
+                },
+                {
+                    type: 'input',
+                    name: 'firstEngineerGitHub',
+                    message: 'What is the first engineers github?',
+                },
+                {
+                    type: 'input',
+                    name: 'secondEngineerName',
+                    message: 'What is the second engineers name?',
+                },
+                {
+                    type: 'input',
+                    name: 'secondEngineerId',
+                    message: 'What is the second engineers id?',
+                },
+                {
+                    type: 'input',
+                    name: 'secondEngineerEmail',
+                    message: 'What is the second engineers email?',
+                },
+                {
+                    type: 'input',
+                    name: 'secondEngineerGitHub',
+                    message: 'What is the second engineers github?',
+                },
+                {
+                    type: 'input',
+                    name: 'thirdEngineerName',
+                    message: 'What is the third engineers name?',
+                },
+                {
+                    type: 'input',
+                    name: 'thirdEngineerId',
+                    message: 'What is the third engineers id?',
+                },
+                {
+                    type: 'input',
+                    name: 'thirdEngineerEmail',
+                    message: 'What is the third engineers email?',
+                },
+                {
+                    type: 'input',
+                    name: 'thirdEngineerGitHub',
+                    message: 'What is the third engineers github?',
+                },
+                {
+                    type: 'input',
+                    name: 'internName',
+                    message: 'What is the interns name?',
+                },
+                {
+                    type: 'input',
+                    name: 'internId',
+                    message: 'What is the interns id?',
+                },
+                {
+                    type: 'input',
+                    name: 'internEmail',
+                    message: 'What is the interns email?',
+                },
+                {
+                    type: 'input',
+                    name: 'internSchool',
+                    message: 'What is the interns school?',
+                },
             ])
             .then((response) => {
-                console.log (response); 
                 let Employee = new Employee(response.name, response.id,response.email,response.role, response.officeNumber, response.school, response.gitHub)
                 const generateHTML = ({ response.name, response.id, response.email, response.officeNumber, response.role, response.school, response.gitHub }) =>
                 `<!DOCTYPE html>
