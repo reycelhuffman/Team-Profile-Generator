@@ -1,3 +1,10 @@
+body {
+    background-color: #e84756;
+    /* font-family: fantasy; */
+    margin: 0px 0px 0px 0px ;
+    max-height: 100vh;
+}
+
 .headerTitle {
     text-align: center;
     /* border: solid black; */
@@ -6,10 +13,11 @@
 
 .flexBoxContainer {
     display: flex;
-    /* border: solid red; */
-    justify-content: center;
     flex-wrap: wrap;
-    /* background-color: blue; */
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    max-height: 100vh;
 }
 
 .flexBoxBottom {
@@ -22,22 +30,26 @@
 
 .topCards {
     display: flex;
-    flex-wrap: wrap;
-    /* flex-wrap: wrap; */
-    /* margin: 20px; */
-    justify-content: center;
-    align-items: left;
-    margin: auto;
-    /* border: 2px block solid; */
+justify-content: center;
+/* padding: 00px 23% 00px 23%; */
+height: 100%;
+width: 100%;
+align-items: left;
+/* border: 2px solid black; */
+padding-top: 40px;
 }
 
 .bottomCards {
     display: flex;
-    /* margin: 20px; */
-    /* justify-content: space-between; */
     justify-content: center;
-    align-items: center;
-    /* border: 2px solid green; */
+    height: 100%;
+    width: 100%;
+    align-items: left;
+    /* padding-left: 32%;
+    padding-right: 32%; */
+    /* border: 2px solid black; */
+    padding-top: 40px;
+    padding-bottom: 40px;
 } 
 
 .card-body {
@@ -50,5 +62,13 @@
 }
 
 .card {
+    display: flex;
+    flex-wrap: wrap;
+    height: 225px;
+    width: 275px;
+    box-shadow: 0 0 10px 2px;
+    border-radius: 10px;
     border: 2px solid black;
+    margin: 0px 25px 0px 25px;
+    box-shadow: 0 0 10px 2px;
 }

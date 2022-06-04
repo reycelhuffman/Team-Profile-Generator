@@ -10,7 +10,7 @@ The user should clone the repository from GitHub and download node.  You need to
 ## Usage:
 The user will be prompt with questions that they need to answer. 
 ## Credits:
-Dane Edwards, Andrew Layendecker
+Dane Edwards, Andrew Layendecker, Joshua Christianson
 ## License: 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
