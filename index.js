@@ -25,7 +25,7 @@ inquirer
                 },
                 {
                     type: 'input',
-                    name: 'officeNumber',
+                    name: 'managerOfficeNumber',
                     message: 'What is your officeNumber?',
                 },
                 {
@@ -110,8 +110,7 @@ inquirer
                 },
             ])
             .then((response) => {
-                let Employee = new Employee(response.name, response.id,response.email,response.role, response.officeNumber, response.school, response.gitHub)
-                const generateHTML = ({ response.name, response.id, response.email, response.officeNumber, response.role, response.school, response.gitHub }) =>
+                let content = ``
                 `<!DOCTYPE html>
                 <html lang="en">
                 
@@ -147,18 +146,9 @@ inquirer
                     </section>
                 </body>
                 </html>`;
+                fs.writeFile('index.html', content, (error) => console.error(error))
             })
-        }
+        
 
-
-    const init = () => {
-        promptUser()
-          // Use writeFileSync method to use promises instead of a callback function
-        .then((answers) => fs.writeFileSync('index.html', generateHTML(answers)))
-        .then(() => console.log('Successfully wrote to index.html'))
-        .catch((err) => console.error(err));
-    };
-    
-    init();
 
     
